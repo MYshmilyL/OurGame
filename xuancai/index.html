@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	<title>宝贝选菜</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/fontsize.js"></script>
+	<style>
+		.box{
+		     width: 100%;
+		     height: 100vh;
+		     background-image: url(images/mango.png);
+		     background-repeat: no-repeat;
+		     -webkit-background-size: 100% auto;
+		     background-size: 100% auto;
+		     background-position: left bottom;
+		}
+		 .cont{
+		     width: 100%;
+		     height: 5.7rem;
+		     background-image: url(images/top.png);
+		     background-repeat: no-repeat;
+		     -webkit-background-size: 100% auto;
+		     background-size: 100% auto;
+		     background-position: left top;
+		}
+		 .cont h2{
+		     font-size: 0.6rem;
+		     text-align: center;
+		     line-height: 2rem;
+		     color:#e7bc3d;
+		}
+		 .cont img{
+		     width: 4.65rem;
+		     height: 2.68rem;
+		     display: block;
+		     margin: 0 auto;
+		}
+		 .cont .btn{
+		     width: 4.65rem;
+		     margin: 0 auto;
+		     margin-top: 0.4rem;
+		}
+		 input{
+		     width: 1.5rem;
+		     height: 1rem;
+		     color: #fff;
+		     font-size: 0.3rem;
+		     border-radius: 0.06rem;
+		     border:none;
+		     outline: none;
+		     cursor: pointer;
+		     display: inline-block;
+		}
+		 input:first-child{
+		     background: #eecb39;
+		     float: left;
+		     margin-left: 0.4rem;
+		}
+		 input:last-child{
+		     background: #ab7953;
+		     float: right;
+		     margin-right: 0.4rem;
+		}
+		 input {
+		     position: relative;
+		    /*/
+		     /隐藏溢出的径向渐变背景*/
+		     overflow: hidden;
+		}
+ 
+
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="cont" id="cont">
+			<h2>宝贝丫头选菜啦</h2>
+
+			<img src="images/1.png" id="pic">
+			<div class="btn">
+
+				<input type="button" id="start" value="开始选菜" />
+				<input type="button" id="end" value="我想好了" />
+
+			</div>
+			
+		</div>
+		
+
+	</div>
+	<div class="" style="display: none;">
+		<img src="images/1.png" alt="">
+		<img src="images/2.png" alt="">
+		<img src="images/3.png" alt="">
+		<img src="images/4.png" alt="">
+		<img src="images/5.png" alt="">
+		<img src="images/6.png" alt="">
+		<img src="images/7.png" alt="">
+	</div>
+
+
+	<script type="text/javascript">
+			window.onload = function(){
+				var box = document.getElementById("cont");				
+				var start = document.getElementById("start");
+				var end = document.getElementById("end");
+				var pic = document.getElementById("pic");
+				var picarr = ["images/1.png","images/2.png","images/3.png","images/4.png","images/5.png","images/6.png"]
+				var timer ;
+				start.onclick = function(){
+					clearInterval(timer);
+					timer = setInterval(function(){
+						var num = Math.floor(Math.random()*(picarr.length-1+1-0)+0);
+						pic.setAttribute("src",picarr[num]);						
+					},100)
+				}
+				end.onclick = function(){
+					clearInterval(timer);
+				}
+			
+			}
+	</script>
+</body>
+</html>
