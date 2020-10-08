@@ -1,0 +1,39 @@
+body,h1,h2,h3,p,ul,li{
+     padding:0;
+     margin:0;
+}
+ h1,h2,h3{
+     font-weight:normal;
+}
+ body{
+     font-family:"Microsoft Yahei";
+     background-color:#fff;
+     overflow-x:hidden;
+}
+ li{
+     list-style:none;
+}
+ a{
+     text-decoration:none;
+  	 color: #084eb0;
+}
+ a:hover{
+     text-decoration:none;
+}
+ img{
+     border:0;
+}
+ .fl{
+     float:left;
+}
+ .fr{
+     float:right;
+}
+.pr{position: relative;width: 100%;clear: both;}
+.pa{position: absolute;}
+ .clearfix{
+     clear:both;
+     display:block;
+     height:1px;
+     visibility:none;
+}

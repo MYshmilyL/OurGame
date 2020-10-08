@@ -36,18 +36,10 @@
 
 
 		}
-		/* .cont img{
+		 .cont img{
 		     width: 4.65rem;
 		     height: 2.68rem;
 		     display: block;
-		     margin: 0 auto;
-		}*/
-		.cont #cai{
-		     width: 4.65rem;
-		     height:1rem;
-		     text-align: center;
-		     line-height: 1rem;
-		     font-size: 0.3rem;
 		     margin: 0 auto;
 		}
 		 .cont .btn{
@@ -115,9 +107,8 @@
 			  <div>啦</div>
 			  <div>~</div>
 			</div>
-			<div style="clear: both;"></div>
 
-			<div id="cai"></div>
+			<img src="images/1.png" id="pic">
 			<div class="btn">
 
 				<input type="button" id="start" value="开始选菜" />
@@ -145,19 +136,14 @@
 				var box = document.getElementById("cont");				
 				var start = document.getElementById("start");
 				var end = document.getElementById("end");
-				// var pic = document.getElementById("pic");
-				var cai = document.getElementById("cai");
-				
-				var picarr = ["热干面","两掺","自选","酸辣粉","米线","拌面","麻辣烫","馄饨","盖饭","热干面","两掺","自选","酸辣粉","米线","拌面","麻辣烫","馄饨","盖饭"]
-				var num1 = Math.floor(Math.random()*(picarr.length-1+1-0)+0);
-				cai.innerHTML=	picarr[num1]
+				var pic = document.getElementById("pic");
+				var picarr = ["images/1.png","images/2.png","images/3.png","images/4.png","images/5.png","images/6.png"]
 				var timer ;
 				start.onclick = function(){
 					clearInterval(timer);
 					timer = setInterval(function(){
 						var num = Math.floor(Math.random()*(picarr.length-1+1-0)+0);
-						// pic.setAttribute("src",picarr[num]);	
-						cai.innerHTML=	picarr[num]				
+						pic.setAttribute("src",picarr[num]);						
 					},100)
 				}
 				end.onclick = function(){
